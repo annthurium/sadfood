@@ -111,10 +111,11 @@
               if (err) {
                 resultsHtml.innerHTML = err.toString();
               } else {
-                const result = results.find((result) => result.label === 'yum');
-                const yumScore = parseFloat(result.confidence * 10000).toFixed(4);
+                const result = results.find((result) => result.label === 'happy');
+                const happyScore = parseFloat(result.confidence * 10000).toFixed(4);
                 container.score = result.confidence;
-                resultsHtml.innerHTML += `Yum score: ${yumScore}`;
+                const emoji = happyScore < 5000 ? '😞' : '😀'
+                resultsHtml.innerHTML += `Food score: ${emoji} ${happyScore}`;
               }
               img.before(resultsHtml);
               if (--remaining === 0) {

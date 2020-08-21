@@ -20,12 +20,12 @@
     <div class="outer">
       <div class="inner">
         <div id="button-group" class="button-group">
-          <span class="offset"><button disabled id="yuck-button">Yuck!</button></span>
+          <span class="offset"><button disabled id="sad-button">Sad. 😞</button></span>
           <button disabled id="predict-button">Predict</button>
           <button id="clear-button">Clear</button>
           <button id="train-button">Train</button>
           <button id="save-button" disabled>Save</button>
-          <span class="offset"><button disabled id="yum-button">Yum!</button></span>
+          <span class="offset"><button disabled id="happy-button">Happy! 😀</button></span>
           <div id="progress"><progress id="progress" class="progress"></progress></div>
         </div>
         <div id="predict-results" class="predict-results"></div>
@@ -41,8 +41,8 @@
       let trained = false;
       const predict = document.getElementById('predict-button');
       const save = document.getElementById('save-button');
-      const yuck = document.getElementById('yuck-button');
-      const yum = document.getElementById('yum-button');
+      const sad = document.getElementById('sad-button');
+      const happy = document.getElementById('happy-button');
       const train = document.getElementById('train-button');
       const predictResults = document.getElementById('predict-results');
       const dropZone = document.getElementById('body');  
@@ -90,14 +90,14 @@
           predict.disabled = false;
           save.disabled = false;
         }
-        yuck.disabled = false;
-        yum.disabled = false;
+        sad.disabled = false;
+        happy.disabled = false;
       }
 
       function disableButtons() {
         predict.disabled = true;
-        yuck.disabled = true;
-        yum.disabled = true;
+        sad.disabled = true;
+        happy.disabled = true;
       }
 
       const clear = document.getElementById('clear-button');
@@ -114,19 +114,19 @@
       function modelLoaded() {
         document.getElementById('progress').remove();
 
-        yuck.addEventListener('click', () => {
+        sad.addEventListener('click', () => {
           const imgs = getImages();
           for (const img of imgs) {
-            console.log('Adding an image to yuck collection.');
-            classifier.addImage(img, 'yuck');
+            console.log('Adding an image to sad collection.');
+            classifier.addImage(img, 'sad');
           }
         });
 
-        yum.addEventListener('click', () => {
+        happy.addEventListener('click', () => {
           const imgs = getImages();
           for (const img of imgs) {
-            console.log('Adding an image to yum collection.')
-            classifier.addImage(img, 'yum');
+            console.log('Adding an image to happy collection.')
+            classifier.addImage(img, 'happy');
           }
         });
 
