@@ -1,0 +1,19 @@
+{
+  "name": "sadfood",
+  "version": "0.0.0",
+  "description": "Don't be sad! Your microwaved frozen burrito lunch is fine! Don't be intimidated by your friends posting their artisan homebaked sourdough baguettes. They're eating peanut butter every other meal too.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annthurium/sadfood.git"
+  },
+  "author": "Rich Trott (mostly)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/annthurium/sadfood/issues"
+  },
+  "homepage": "https://github.com/annthurium/sadfood#readme"
+}
