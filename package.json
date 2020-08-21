@@ -1,6 +1,6 @@
 {
   "name": "sadfood",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Don't be sad! Your microwaved frozen burrito lunch is fine! Don't be intimidated by your friends posting their artisan homebaked sourdough baguettes. They're eating peanut butter every other meal too.",
   "main": "index.js",
   "scripts": {
